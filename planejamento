@@ -1,0 +1,3 @@
+Criar uma funçao para cada % esperado em arquivos diferentes
+Percorrer a string passada no argumento e chamar cada uma conforme o % encontrado
+Entender melhor o uso de va_ para usa-lo afim de identificar e localizar cada argumento extra do printf
