@@ -1,0 +1,49 @@
+0
+10
+32
+63
+111
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+>	Move o ponteiro para a direita
+<	Move o ponteiro para a esquerda
++	Incrementa o valor da célula atual
+-	Decrementa o valor da célula atual
+.	Imprime o valor da célula atual como caractere ASCII
+,	Lê um caractere do input para a célula atual
+[	Começo de loop: repete enquanto a célula atual ≠ 0
+]	Fim de loop
+
+++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>.>---.++++++++++++.++.+++
++++.--.<<++.>>------.------------.+++++++++++++.<<.>>++++++.------------
+.-------. +++++++++++++++++++.<<.>>----------------.+++++.+++++++++.---
+----------.--.+ ++++++++++++++++.--------.+++++++++++++.<<.>>----------
+-------------.+++.+++ ++++.---.----.+++++++++++++++++.---------------
+--.-.<<.>>+++++.+++++.<<.>-------...
+
+Famous man that directly belirved jo ???
