@@ -6,11 +6,13 @@
 /*   By: g-alves- <g-alves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:50:18 by g-alves-          #+#    #+#             */
-/*   Updated: 2025/09/09 14:55:43 by g-alves-         ###   ########.fr       */
+/*   Updated: 2025/09/15 20:00:14 by g-alves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	validate_conversion(const char *position);
+#include <stdio.h>
+
+void	validate_conversion(char *pointer);
 
 int	ft_printf(const char *format, ...)
 {
@@ -19,17 +21,26 @@ int	ft_printf(const char *format, ...)
 	pointer = format;
 	while (*pointer)
 	{
-		if (*pointer == "%")
+		if (*pointer == '%')
 		{
-			validate_conversion(*pointer + 1);
+			validate_conversion(pointer + 1);
 		}
 		pointer++;
 	}
 }
 
-void	validate_conversion(const char *position)
+void	validate_conversion(char *pointer)
 {
-	struct conversion {
+	char	string[2];
+	size_t	position;
+
+	position = 0;
+	string['c'] = print_char(*pointer);
+	string['s'] = print_string(*pointer);
+	while (string[position] != pointer)
+		position++;
+	while (string[position] == pointer)
+	{
 		
 	}
 }
