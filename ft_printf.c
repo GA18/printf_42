@@ -6,7 +6,7 @@
 /*   By: g-alves- <g-alves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 10:50:18 by g-alves-          #+#    #+#             */
-/*   Updated: 2025/11/17 18:00:18 by g-alves-         ###   ########.fr       */
+/*   Updated: 2025/11/17 19:21:57 by g-alves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*pointer == '%')
 		{
-			count += (validate_conversion(*(pointer + 1), args));
-			pointer += 2;
+			pointer++;
+			count += (validate_conversion(*(pointer), args));
+			pointer++;
 		}
-		count += write(1, pointer++, 1);
+		else
+			count += write(1, pointer++, 1);
 	}
 	return (count);
 }
@@ -52,33 +54,18 @@ int	validate_conversion(char type, va_list args)
 	if (type == 'X')
 		return (ft_puthex("0123456789ABCDEF", args));
 	if (type == '%')
-		return (write(1, &"%", 1));
+		return (write(1, "%", 1));
 	return (0);
 }
 
-int	main(void)
-{
-	int	i;
-	int	j;
-	int	k;
-	int	l;
-	int	m;
-	int	n;
-	int	o;
-	int	p;
-	int	q;
-	int	r;
+// int	main(void)
+// {
+// 	int		i;
+// 	int		j;
 
-	i = ft_printf("%d\n", 0);
-	j = ft_printf("%u\n", 0);
-	k = ft_printf("%x\n", 0);
-	l = ft_printf("%X\n", 0);
-	m = ft_printf("%u\n", 4294967295u);
+// 	i = ft_printf(" %p %p ", (char *)0, (char *)0);
+// 	j = printf(" %p %p ", (char *)0, (char *)0);
 
-	n = printf("%d\n", 0);
-	o = printf("%u\n", 0);
-	p = printf("%x\n", 0);
-	q = printf("%X\n", 0);
-	r = printf("%u\n", 4294967295u);
-	printf("i: %i, j: %i, k: %i, l: %i, m: %i, n: %i, o: %i, p: %i, q: %i, r: %i", i, j, k, l, m, n, o, p, q, r);
-}
+// 	printf("meu printf: %i\n", i);
+// 	printf("Printf ORIGINAL: %i", j);
+// }
